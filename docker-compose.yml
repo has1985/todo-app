@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+  postgres_db:
+    image: postgres
+    hostname: postgres_db
+    container_name: postgres_DB
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./seeds/initdb:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  migrate-todo-db:
+    image: infoblox/migrate:latest
+    container_name: migrate-todo-db
+    volumes:
+      - ./schema:/schema
+    depends_on:
+      -   postgres_db
+    restart: on-failure:10
+    command: --path=/schema/ --verbose --database.driver=postgres --database.address=postgres_DB:5432 --database.name=todo-db --database.user=postgres --database.password=postgres --database.ssl=disable up
