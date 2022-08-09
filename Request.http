@@ -1,0 +1,8 @@
+### Create user
+POST http://localhost:8000/auth/sign-up
+
+{
+  "name": "Sasha",
+  "username": "Husarev",
+  "password": "qwerty"
+}
