@@ -6,3 +6,11 @@ POST http://localhost:8000/auth/sign-up
   "username": "Husarev",
   "password": "qwerty"
 }
+
+### Create user
+POST http://localhost:8000/auth/sign-in
+
+{
+  "username": "Husarev",
+  "password": "qwerty"
+}
