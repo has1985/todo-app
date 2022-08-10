@@ -7,10 +7,14 @@ POST http://localhost:8000/auth/sign-up
   "password": "qwerty"
 }
 
-### Create user
+### Sign-in
 POST http://localhost:8000/auth/sign-in
 
 {
   "username": "Husarev",
   "password": "qwerty"
 }
+
+###
+POST http://localhost:8000/api/lists
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAyMTIxNTAsImlhdCI6MTY2MDE2ODk1MCwidXNlcl9pZCI6MTF9.04XnUIEd3NE54ePzH8LDMfkku1XKqDbsHVkrZWlNuI8
