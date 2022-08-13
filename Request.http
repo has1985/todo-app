@@ -17,4 +17,25 @@ POST http://localhost:8000/auth/sign-in
 
 ###
 POST http://localhost:8000/api/lists
-Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAyMTIxNTAsImlhdCI6MTY2MDE2ODk1MCwidXNlcl9pZCI6MTF9.04XnUIEd3NE54ePzH8LDMfkku1XKqDbsHVkrZWlNuI8
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3NDQsImlhdCI6MTY2MDMzOTU0NCwidXNlcl9pZCI6MX0.uOsDuuieGA4PKp28pO930BVp2d4mYyfY8DRacISHuFw
+
+{
+"title":"Список продуктов"
+}
+
+###
+POST http://localhost:8000/api/lists
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3NDQsImlhdCI6MTY2MDMzOTU0NCwidXNlcl9pZCI6MX0.uOsDuuieGA4PKp28pO930BVp2d4mYyfY8DRacISHuFw
+
+{
+"title":"Список дел",
+"description":"Срочно нужно сделать"
+}
+
+###
+GET http://localhost:8000/api/lists
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3NDQsImlhdCI6MTY2MDMzOTU0NCwidXNlcl9pZCI6MX0.uOsDuuieGA4PKp28pO930BVp2d4mYyfY8DRacISHuFw
+
+###
+GET http://localhost:8000/api/lists/3
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3NDQsImlhdCI6MTY2MDMzOTU0NCwidXNlcl9pZCI6MX0.uOsDuuieGA4PKp28pO930BVp2d4mYyfY8DRacISHuFw

@@ -13,7 +13,7 @@ title varchar(255) not null,
 description varchar(255)
 );
 
-CREATE TABLE user_lists
+CREATE TABLE users_lists
 (
     id serial not null unique,
     user_id int references users(id) on delete cascade  not null,
