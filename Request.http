@@ -17,15 +17,16 @@ POST http://localhost:8000/auth/sign-in
 
 ###
 POST http://localhost:8000/api/lists
-Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3NDQsImlhdCI6MTY2MDMzOTU0NCwidXNlcl9pZCI6MX0.uOsDuuieGA4PKp28pO930BVp2d4mYyfY8DRacISHuFw
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA1NTE5MTAsImlhdCI6MTY2MDUwODcxMCwidXNlcl9pZCI6MX0.u6PV-83tiHBsLA7iWAyU-MbXNsJJmW7QB0yxoQLk0y0
 
 {
-"title":"Список продуктов"
+"title":"Список продуктов",
+"description":"Срочно нужно купить"
 }
 
 ###
 POST http://localhost:8000/api/lists
-Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3NDQsImlhdCI6MTY2MDMzOTU0NCwidXNlcl9pZCI6MX0.uOsDuuieGA4PKp28pO930BVp2d4mYyfY8DRacISHuFw
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA1NTMzMzQsImlhdCI6MTY2MDUxMDEzNCwidXNlcl9pZCI6MX0.3L3DMWm2gzkoIERq1r5Qaxybz_MetGOP4HaV1H-xs5M
 
 {
 "title":"Список дел",
@@ -34,8 +35,51 @@ Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3ND
 
 ###
 GET http://localhost:8000/api/lists
-Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3NDQsImlhdCI6MTY2MDMzOTU0NCwidXNlcl9pZCI6MX0.uOsDuuieGA4PKp28pO930BVp2d4mYyfY8DRacISHuFw
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA1NTMzMzQsImlhdCI6MTY2MDUxMDEzNCwidXNlcl9pZCI6MX0.3L3DMWm2gzkoIERq1r5Qaxybz_MetGOP4HaV1H-xs5M
 
 ###
-GET http://localhost:8000/api/lists/3
-Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjAzODI3NDQsImlhdCI6MTY2MDMzOTU0NCwidXNlcl9pZCI6MX0.uOsDuuieGA4PKp28pO930BVp2d4mYyfY8DRacISHuFw
+GET http://localhost:8000/api/lists/2
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA1NTYwODcsImlhdCI6MTY2MDUxMjg4NywidXNlcl9pZCI6MX0.GT5UeK3XeAFj3sGbZW4vAeTsJmHO_RqYTWZUkZxALpc
+
+###
+DELETE http://localhost:8000/api/lists/2
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA0MzU2NDYsImlhdCI6MTY2MDM5MjQ0NiwidXNlcl9pZCI6MX0.nQYWVQODMGqFjOkf0uUKdE205Il80DViuGT7h8NcgiU
+
+###
+PUT http://localhost:8000/api/lists/1
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA0MzU2NDYsImlhdCI6MTY2MDM5MjQ0NiwidXNlcl9pZCI6MX0.nQYWVQODMGqFjOkf0uUKdE205Il80DViuGT7h8NcgiU
+
+{
+"description":"Продукты питания для дома"
+}
+
+###########################################
+
+###
+POST http://localhost:8000/api/lists/1/items
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA1NTMzMzQsImlhdCI6MTY2MDUxMDEzNCwidXNlcl9pZCI6MX0.3L3DMWm2gzkoIERq1r5Qaxybz_MetGOP4HaV1H-xs5M
+
+{
+"title":"Бананы"
+}
+
+###
+GET http://localhost:8000/api/lists/1/items
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA1NTMzMzQsImlhdCI6MTY2MDUxMDEzNCwidXNlcl9pZCI6MX0.3L3DMWm2gzkoIERq1r5Qaxybz_MetGOP4HaV1H-xs5M
+
+###
+GET http://localhost:8000/api/items/1
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA2NDIzMjMsImlhdCI6MTY2MDU5OTEyMywidXNlcl9pZCI6MX0.85ZbpzRrj-of8yEvFVeqE5qzSP8dyqITrgKXeQfhywI
+
+###
+DELETE http://localhost:8000/api/items/2
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA2NDIzMjMsImlhdCI6MTY2MDU5OTEyMywidXNlcl9pZCI6MX0.85ZbpzRrj-of8yEvFVeqE5qzSP8dyqITrgKXeQfhywI
+
+###
+PUT http://localhost:8000/api/items/1
+Authorization: Birer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjA2NDIzMjMsImlhdCI6MTY2MDU5OTEyMywidXNlcl9pZCI6MX0.85ZbpzRrj-of8yEvFVeqE5qzSP8dyqITrgKXeQfhywI
+
+{
+"description":"Вкусный и сочный",
+"done":true
+}
