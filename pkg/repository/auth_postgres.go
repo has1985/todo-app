@@ -22,6 +22,7 @@ func (r *AuthPostgres) CreateUser(user todo.User) (int, error) {
 	if err := row.Scan(&id); err != nil {
 		return 0, err
 	}
+
 	return id, nil
 }
 
@@ -31,5 +32,4 @@ func (r *AuthPostgres) GetUser(username, password string) (todo.User, error) {
 	err := r.db.Get(&user, query, username, password)
 
 	return user, err
-
 }
