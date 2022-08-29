@@ -49,6 +49,9 @@ func (h *Handler) getAllItems(c *gin.Context) {
 	}
 
 	items, err := h.services.TodoItem.GetAll(userId, listId)
+	if err != nil {
+		return
+	}
 
 	c.JSON(http.StatusOK, items)
 }
